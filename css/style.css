@@ -39,7 +39,7 @@ header {
    padding: 10px 10px 10px 30px;
    font-size: 3rem;
    transition: .3s;
-   cursor: pointer;
+   cursor: grab;
 }
 .brand::before{
    content: "";
@@ -82,12 +82,31 @@ header {
 .navLink > a:hover {
    color: #fff;
 }
-
+.navLink2 {
+   display: none;
+}
+.menu2 {
+   text-decoration: none;
+   color: var(--muted);
+   font-family: "jetBrains", sans-serif;
+   display: block;
+   padding: 35px 0px;
+   width: 100px;
+   text-align: center;
+   transition: .3s;
+   cursor: pointer;
+}
+.menu2:hover {
+   color: #fff;
+}
 /* main */
+#introduction {
+   height: 800px;
+}
 
 #lingkaran {
    display: flex;
-   height: 600px;
+   height: 700px;
    justify-content: center;
    align-items: center;
    background-color: var(--bg);

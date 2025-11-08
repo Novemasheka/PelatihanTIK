@@ -23,14 +23,23 @@ hamburger[0].addEventListener("click", ()=> {
    let statusNav = [window.getComputedStyle(nav[0]).opacity,window.getComputedStyle(nav[0]).height];
    if(statusNav[0] == "0") {
       nav[0].style.opacity = "100"
-      nav[0].style.height = "130px"
+      nav[0].style.height = "200px"
    } else {
       nav[0].style.opacity = "0"
       nav[0].style.height = "0"
       
    }
 })
-
+function navLink() {
+   let statusNav = [window.getComputedStyle(nav[0]).opacity,window.getComputedStyle(nav[0]).height];
+   roti[0].style.transform = roti[0].style.transform ? "" : "translateY(10px) rotate(90deg)"
+   roti[1].style.transform = roti[1].style.transform ? "" : "translateX(10px) rotate(60deg) translateY(15px)"
+   roti[1].style.width = roti[1].style.width ? "" : "20px"
+   roti[2].style.width = roti[2].style.width ? "" : "20px"
+   roti[2].style.transform = roti[2].style.transform ? "" : "translateX(10px) rotate(-60deg) translateY(-6px)"
+   nav[0].style.opacity = "0"
+   nav[0].style.height = "0"
+}
 // lingkaran
 
 outputBundar.innerHTML = `
@@ -41,7 +50,7 @@ function countLingkaran() {
    let jari2 = Number(document.getElementById("jari").value);
    let diameter = Number(document.getElementById("diameter").value);
    let outputBundar = document.getElementById("outputBundar")
-
+   
    let pie = 3.14;
    if(jari2 > 0 && diameter == 0){
       oDiameter = jari2 * 2;

@@ -36,6 +36,7 @@ header {
 .navLink {
    list-style: none ;
    width: 100%;
+   display: none;
 }
 .navLink > a {
    text-decoration: none;
@@ -46,15 +47,17 @@ header {
    text-align: center;
    transition: .3s;
 }
+.navLink2 {display: inline-block;}
 .navLink > a:hover {
    color: #fff;
 }
+.menu2 {display: none;}
 /* main */
 
 #lingkaran {
    padding-top: 20px;
    display: flex;
-   height: 600px;
+   height: 700px;
    justify-content: center;
    align-items: center;
    background-color: var(--bg);
