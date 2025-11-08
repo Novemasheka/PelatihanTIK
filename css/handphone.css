@@ -92,6 +92,11 @@ header {
    font-family: jetbrains;
    cursor: pointer;
 }
+.output {
+   width: 260px;
+   margin-top: 10px;
+}
 #outputBundar {
    color: #fff;
+   font-family: jetbrains;
 }
