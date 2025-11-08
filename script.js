@@ -12,8 +12,7 @@ function Headers() {
    }
 }
 
-nav[0].style.opacity = "0"
-nav[0].style.height = "0"
+
 hamburger[0].addEventListener("click", ()=> {
    roti[0].style.transform = roti[0].style.transform ? "" : "translateY(10px) rotate(90deg)"
    roti[1].style.transform = roti[1].style.transform ? "" : "translateX(10px) rotate(60deg) translateY(15px)"
@@ -21,8 +20,8 @@ hamburger[0].addEventListener("click", ()=> {
    roti[2].style.width = roti[2].style.width ? "" : "20px"
    roti[2].style.transform = roti[2].style.transform ? "" : "translateX(10px) rotate(-60deg) translateY(-6px)"
 
-   // let statusNav = window.getComputedStyle(nav[0]).display;
-   if(nav[0].style.opacity === "0") {
+   let statusNav = [window.getComputedStyle(nav[0]).opacity,window.getComputedStyle(nav[0]).height];
+   if(statusNav[0] == "0") {
       nav[0].style.opacity = "100"
       nav[0].style.height = "130px"
    } else {
@@ -34,23 +33,24 @@ hamburger[0].addEventListener("click", ()=> {
 
 // lingkaran
 
-
+outputBundar.innerHTML = `
+      <span style="color: var(--blue)">Keliling</span> : ? <br>
+      <span style="color: var(--blue)">Luas</span>    &nbsp;&nbsp;&nbsp; : ? 
+   `
 function countLingkaran() {
    let jari2 = Number(document.getElementById("jari").value);
    let diameter = Number(document.getElementById("diameter").value);
    let outputBundar = document.getElementById("outputBundar")
 
    let pie = 3.14;
-
    if(jari2 > 0 && diameter == 0){
       oDiameter = jari2 * 2;
       keliling = 2 * pie * (oDiameter/2)
       luas = pie * (oDiameter/2) **2
-
       outputBundar.innerHTML = `
-      Diameter : ${oDiameter} cm<br>
-      Keliling : ${keliling} cm<br>
-      Luas     : ${luas} cm²
+      <span style="color: var(--blue)">Diameter</span> : ${oDiameter} cm<br>
+      <span style="color: var(--blue)">Keliling</span> : ${keliling} cm<br>
+      <span style="color: var(--blue)">Luas</span>     &nbsp;&nbsp;&nbsp;&nbsp: ${luas} cm²
    `
    } else if (diameter > 0 && jari2 == 0) {
       oJari2 = diameter /2;
@@ -58,9 +58,11 @@ function countLingkaran() {
       luas = pie * oJari2 **2
 
       outputBundar.innerHTML = `
-      Jari     : ${oJari2} cm<br>
-      Keliling : ${keliling} cm<br>
-      Luas     : ${luas} cm²
+      <span style="color: var(--blue)">Jari²</span> &nbsp;&nbsp;&nbsp: ${oJari2} cm<br>
+      <span style="color: var(--blue)">Keliling</span> : ${keliling} cm<br>
+      <span style="color: var(--blue)">Luas</span> &nbsp;&nbsp;&nbsp;&nbsp: ${luas} cm²
       `
+   } else if (jari2 == 0 && diameter == 0) {
+      alert("tolong diisi ya, jangan dikosongkan ^^")
    }
 }

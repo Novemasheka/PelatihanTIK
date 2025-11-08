@@ -29,6 +29,8 @@ header {
 }
 .nav_cards {
    width: 100%;
+   opacity: 0;
+   height: 0;
    transition: .3s;
 }
 .navLink {
@@ -48,19 +50,23 @@ header {
    color: #fff;
 }
 /* main */
+
 #lingkaran {
-   height: 500px;
+   padding-top: 20px;
    display: flex;
+   height: 600px;
    justify-content: center;
    align-items: center;
    background-color: var(--bg);
    flex-direction: column;
+   align-items: flex-start;
 }
 .vektorBundar {
    height: 150px;
    width: 150px;
    border-radius: 50%;
    background-color: #fff;
+   margin: auto;
 }
 #diameter {
    outline: none;
@@ -69,7 +75,7 @@ header {
    transition: .3s;
 }
 #diameter:focus {
-   border: 2px solid var(--blue);
+   border: 3px solid var(--blue);
 }
 #jari {
    border-radius: 10px;
@@ -78,13 +84,22 @@ header {
    transition: .3s;
 }
 #jari:focus {
-   border: 2px solid var(--blue);
+   border: 3px solid var(--blue);
 }
 .brandBundar {
    font-family: jetbrains;
    color: var(--blue);
-   margin: 20px 0px;
-   margin: 10px;
+   margin: 20px 20px;
+   
+}
+.inputBundar {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   flex-wrap: wrap;
+}
+.brandBundar > h3 {
+   font-size: 1.5rem;
 }
 .brandBundar > figcaption {
    color: var(--muted);
@@ -99,12 +114,19 @@ header {
    border: none;
    font-family: jetbrains;
    cursor: pointer;
+   transition: .3s;
+}
+.count:active {
+   background: var(--blue);
+   color: #fff;
+   transform: scale(0.8);
 }
 .output {
    width: 260px;
-   margin-top: 10px;
+   margin: 20px;
 }
 #outputBundar {
    color: #fff;
    font-family: jetbrains;
+   font-size: 1.2rem;
 }
