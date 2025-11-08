@@ -1,6 +1,5 @@
 header {
    height: auto;
-   border:2px solid blue;
    flex-direction: column;
 }
 .menu {
@@ -18,23 +17,81 @@ header {
    border-radius: 10px;
    height: 5px;
    background-color: white;
+   transition: .3s;
 
 }
 .navigation {
    height:auto;
    width: 100%;
-   border:  2px solid red;
    display: flex;
    flex-direction: column;
    align-items: center;
 }
-.navLink {list-style: none ; width: 100%;}
+.nav_cards {
+   width: 100%;
+   transition: .3s;
+}
+.navLink {
+   list-style: none ;
+   width: 100%;
+}
 .navLink > a {
    text-decoration: none;
    color: var(--muted);
-   font-family: "jetBrains";
+   font-family: "jetBrains", sans-serif;
    display: block;
-   border: 2px solid;
    padding: 10px;
-   
+   text-align: center;
+   transition: .3s;
+}
+.navLink > a:hover {
+   color: #fff;
+}
+/* main */
+#lingkaran {
+   height: 500px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: var(--bg);
+   flex-direction: column;
+}
+.vektorBundar {
+   height: 150px;
+   width: 150px;
+   border-radius: 50%;
+   background-color: #fff;
+}
+#diameter {
+   outline: none;
+   padding: 10px;
+   border-radius: 10px;
+   transition: .3s;
+}
+#diameter:focus {
+   border: 2px solid var(--blue);
+}
+#jari {
+   border-radius: 10px;
+   outline: none;
+   padding: 10px;
+   transition: .3s;
+}
+#jari:focus {
+   border: 2px solid var(--blue);
+}
+.brandBundar {
+   font-family: jetbrains;
+   color: var(--blue);
+   margin: 20px 0px;
+}
+.count {
+   padding: 10px;
+   border-radius: 10px;
+   border: none;
+   font-family: jetbrains;
+   cursor: pointer;
+}
+#outputBundar {
+   color: #fff;
 }

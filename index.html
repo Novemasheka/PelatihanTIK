@@ -14,38 +14,55 @@
       <div class="nav1">
          <div class="brand">Heka<span class="title">.</span></div>
          <div class="menu">
-            <div></div>
-            <div></div>
-            <div></div>
+            <div class="roti"></div>
+            <div class="roti"></div>
+            <div class="roti"></div>
          </div>
       </div>
-         
+
+      <div class="nav_cards">
          <ul class="navigation">
-            <li class="navLink"><a href="">home</a></li>
-            <li class="navLink"><a href="">about</a></li>
-            <li class="navLink"><a href="">contact</a></li>
+            <li class="navLink"><a href="">Home</a></li>
+            <li class="navLink"><a href="">About</a></li>
+            <li class="navLink"><a href="">Contact</a></li>
          </ul>
+      </div>
+         
    </header>
 
    <main class="container">
       <section id="introduction">
          
       </section>
+      <section id="lingkaran">
+         <div class="vektorBundar"></div>
+         <div class="brandBundar">
+            <h2 style="color: white;">Menghitung, </h2>
+            <h2>Luas & Keliling <span style="color: white;">lingkaran.</span></h2>
+         </div>
+         
+         
+         <div class="rumus">
+            <div class="inputBundar">
+               <input type="number" name="diameter" id="diameter" placeholder="Diameter">
+               <div class="jari">
+                  <input type="number" name="jari" id="jari" placeholder="Jari-jari">
+                  <button class="count Bundar" onclick="countLingkaran()">Hitung</button>
+               </div>
+               
+            </div>
+            
+         </div>
+         
+
+         <h3 id="outputBundar"></h3>
+      </section>
    </main>
 
    <footer>
 
    </footer>
-   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
    <script src="script.js"></script>
-   <script>
-      $(document).ready(function(){
-         $(".navigation").hide()
-         $(".menu").click(function() {
-            $(".navigation").animate({height: "toggle"}, 100);
-         })
-      })
-   </script>
    
 </body>
 </html>

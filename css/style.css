@@ -13,28 +13,28 @@ html, * {
     --muted:#9aa4b2;
     --blue:#1A73E8;
     --glass: rgba(255,255,255,0.03);
-
+    --bg2: rgba(14,17,23,0.92);
 }
 
 header {
-   background-color: var(--bg);
+   background:var(--bg2);
    height: 100px;
    width: 100%;
    display: flex;    
-
+   backdrop-filter: blur(5px);
    justify-content: space-between;
    align-items: center;
 }
 .nav1 {
-   background-color: var(--bg);
    height: 100px;
    width: 100%;
    display: flex;    
    justify-content: space-between;
    align-items: center;
+
 }
 .brand {
-   color: #fff;
+   color: white;
    font-family: "jetBrains", sans-serif;
    padding: 10px 10px 10px 30px;
    font-size: 3rem;
@@ -59,17 +59,31 @@ header {
 .brand:hover {color: var(--blue);}
 .brand:hover .title{opacity: 0;}
 .menu {display: none;}
+
 .navigation {
-   height:auto;
-   width: 100%;
-   border:  2px solid red;
+   height: 100px;
    display: flex;
    align-items: center;
+   justify-content: space-around;
+}
+.navLink {
+   list-style: none ;
+
+}
+.navLink > a {
+   text-decoration: none;
+   color: var(--muted);
+   font-family: "jetBrains", sans-serif;
+   display: block;
+   padding: 35px 20px;
+   text-align: center;
+   transition: .3s;
+}
+.navLink > a:hover {
+   color: #fff;
 }
 
 /* main */
-#introduction {
-   height: 10010px;
-   border: 2px solid;
-}
+
+
 
