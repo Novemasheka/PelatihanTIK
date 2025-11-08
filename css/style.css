@@ -8,7 +8,7 @@ html, * {
    box-sizing: border-box;
 }
 :root {
-      --bg:#0E1117;
+    --bg:#0E1117;
     --card:#121318;
     --muted:#9aa4b2;
     --blue:#1A73E8;
@@ -20,16 +20,22 @@ header {
    background-color: var(--bg);
    height: 100px;
    width: 100%;
-   border: 2px solid red;
+   display: flex;    
+
+   justify-content: space-between;
+   align-items: center;
+}
+.nav1 {
+   background-color: var(--bg);
+   height: 100px;
+   width: 100%;
    display: flex;    
    justify-content: space-between;
    align-items: center;
-   position: sticky;
 }
 .brand {
    color: #fff;
    font-family: "jetBrains", sans-serif;
-   border: 2px solid red;
    padding: 10px 10px 10px 30px;
    font-size: 3rem;
    transition: .3s;
@@ -52,22 +58,13 @@ header {
 .brand:hover::before { width: 135px; opacity: 100;}
 .brand:hover {color: var(--blue);}
 .brand:hover .title{opacity: 0;}
-.menu {
-   height: 100px;
-   width: 100px;
+.menu {display: none;}
+.navigation {
+   height:auto;
+   width: 100%;
+   border:  2px solid red;
    display: flex;
    align-items: center;
-   flex-direction: column;
-   justify-content: center;
-   cursor: pointer;
-}
-.menu > div {
-   width: 35px;
-   margin: 3px;
-   border-radius: 10px;
-   height: 5px;
-   background-color: white;
-
 }
 
 /* main */
@@ -75,3 +72,4 @@ header {
    height: 10010px;
    border: 2px solid;
 }
+

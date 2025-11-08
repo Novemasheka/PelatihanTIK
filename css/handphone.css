@@ -1,0 +1,40 @@
+header {
+   height: auto;
+   border:2px solid blue;
+   flex-direction: column;
+}
+.menu {
+   height: 100px;
+   width: 100px;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   justify-content: center;
+   cursor: pointer;
+}
+.menu > div {
+   width: 35px;
+   margin: 3px;
+   border-radius: 10px;
+   height: 5px;
+   background-color: white;
+
+}
+.navigation {
+   height:auto;
+   width: 100%;
+   border:  2px solid red;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.navLink {list-style: none ; width: 100%;}
+.navLink > a {
+   text-decoration: none;
+   color: var(--muted);
+   font-family: "jetBrains";
+   display: block;
+   border: 2px solid;
+   padding: 10px;
+   
+}

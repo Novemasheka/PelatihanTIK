@@ -4,19 +4,27 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Heka - MATH</title>
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/handphone.css" media="screen and (max-width: 450px)">
    <link rel="shortcut icon" href="">
 </head>
 <body>
 
    <header id="header">
-   
+      <div class="nav1">
          <div class="brand">Heka<span class="title">.</span></div>
          <div class="menu">
             <div></div>
             <div></div>
             <div></div>
          </div>
+      </div>
+         
+         <ul class="navigation">
+            <li class="navLink"><a href="">home</a></li>
+            <li class="navLink"><a href="">about</a></li>
+            <li class="navLink"><a href="">contact</a></li>
+         </ul>
    </header>
 
    <main class="container">
@@ -28,8 +36,16 @@
    <footer>
 
    </footer>
-
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
    <script src="script.js"></script>
+   <script>
+      $(document).ready(function(){
+         $(".navigation").hide()
+         $(".menu").click(function() {
+            $(".navigation").animate({height: "toggle"}, 100);
+         })
+      })
+   </script>
    
 </body>
 </html>
