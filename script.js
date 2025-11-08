@@ -42,25 +42,25 @@ function countLingkaran() {
 
    let pie = 3.14;
 
-   if(jari2 > 0){
+   if(jari2 > 0 && diameter == 0){
       oDiameter = jari2 * 2;
       keliling = 2 * pie * (oDiameter/2)
       luas = pie * (oDiameter/2) **2
 
       outputBundar.innerHTML = `
-      Diameter : ${oDiameter} <br>
-      Keliling : ${keliling} <br>
-      Luas     : ${luas}
+      Diameter : ${oDiameter} cm<br>
+      Keliling : ${keliling} cm<br>
+      Luas     : ${luas} cm²
    `
-   } else if (diameter > 0) {
+   } else if (diameter > 0 && jari2 == 0) {
       oJari2 = diameter /2;
       keliling = 2 * pie * oJari2
       luas = pie * oJari2 **2
 
       outputBundar.innerHTML = `
-      Jari     : ${oJari2} <br>
-      Keliling : ${keliling} <br>
-      Luas     : ${luas}
+      Jari     : ${oJari2} cm<br>
+      Keliling : ${keliling} cm<br>
+      Luas     : ${luas} cm²
       `
    }
 }

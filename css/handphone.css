@@ -84,6 +84,14 @@ header {
    font-family: jetbrains;
    color: var(--blue);
    margin: 20px 0px;
+   margin: 10px;
+}
+.brandBundar > figcaption {
+   color: var(--muted);
+   font-size: small;
+   font-style: italic;
+   margin-top: 10px;
+
 }
 .count {
    padding: 10px;
