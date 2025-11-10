@@ -2,6 +2,10 @@
    font-family: jetbrains;
    src: url("font/JetBrainsMono-Bold.ttf");
 }
+@font-face {
+   font-family: lato;
+   src: url(font/Lato-Regular.ttf);
+}
 html, * {
    padding: 0;
    margin: 0;
@@ -58,7 +62,24 @@ header {
 .brand:hover::before { width: 135px; opacity: 100;}
 .brand:hover {color: var(--blue);}
 .brand:hover .title{opacity: 0;}
-.menu {display: none;}
+.menu {
+   height: 100px;
+   width: 100px;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   justify-content: center;
+   cursor: pointer;
+}
+.menu > div {
+   width: 35px;
+   margin: 3px;
+   border-radius: 10px;
+   height: 5px;
+   background-color: white;
+   transition: .3s;
+
+}
 
 .navigation {
    height: 100px;
@@ -85,38 +106,135 @@ header {
 .navLink2 {
    display: none;
 }
-.menu2 {
-   text-decoration: none;
-   color: var(--muted);
-   font-family: "jetBrains", sans-serif;
-   display: block;
-   padding: 35px 0px;
-   width: 100px;
-   text-align: center;
-   transition: .3s;
-   cursor: pointer;
-}
-.menu2:hover {
-   color: #fff;
-}
 /* main */
+
+/* introduction */
+
 #introduction {
    height: 800px;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   box-shadow: 0px 0px 0px black inset;
+   background: #dfdfdf;
 }
+.perkenalan {
+  height: auto;
+  width: 500px;
+}
+.brandIntro {
+  height: auto;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.brandIntro > figcaption {
+   font-family: jetbrains;
+   font-size: large;
+   margin: 10px;
+   cursor: grab;
+}
+.brandIntro > img {
+   border-radius: 1000px;
+   border: 20px solid var(--blue);
+   height: 500px;
+   width: 500px;
+}
+.brandPerkenalan > p:nth-child(1) {
+  font-size: 3rem;
+  font-family: jetBrains;
+}
+.brandPerkenalan > p:nth-child(2) {
+  font-size: 3rem;
+  font-family: jetBrains;
+}
+.about_me {
+   font-family: lato;
+   font-weight: bold;
+   color: #252525;
+   
 
+}
+.about_me > p {font-size: 16px;}
+.forIntro {
+   justify-content: center;
+   margin-top: -20px;
+}
+.intro {
+   background-color: var(--blue);
+}
+.intro > a {
+   color: white;
+   padding: 10px 50px;
+}
+.intro:nth-child(1) {border-radius: 10px 0px 0px 10px;}
+.intro:nth-child(3) {border-radius: 0 10px 10px 0;}
+
+.desHp {display: none;}
+.desHp,.desPC {padding-left: 10px;}
+.medsos {
+   padding: 10px;
+}
+.youtube,.ig,.github {
+   display: flex;
+   align-items: center;
+   padding: 3px;
+}
+.youtube > a,.ig > a,.github > a {
+   text-decoration: none;
+   color: var(--blue);
+   padding-left: 10px;
+   font-style: italic;
+   font-family: lato;
+
+
+}
+/* rumus Lingkaran */
 #lingkaran {
    display: flex;
-   height: 700px;
+   height: 800px;
    justify-content: center;
    align-items: center;
    background-color: var(--bg);
    flex-direction: column;
+   z-index: 2;
+}
+#lingkaran::before {
+   content: "";
+   position: absolute;
+   height: 800px;
+   width: 150px;
+   border: 2px solid red;
+   left: 0;
+   background: var(--blue);
+   filter: blur(110px);
+   z-index: 0;
+}
+#lingkaran::after {
+   content: "";
+   position: absolute;
+   height: 800px;
+   width: 150px;
+   border: 2px solid red;
+   right: 0;
+   background: var(--blue);
+   filter: blur(110px);
+   z-index: 0;
 }
 .vektorBundar {
    height: 150px;
    width: 150px;
    border-radius: 50%;
-   background-color: #fff;
+   background-color: var(--blue);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-family: jetbrains;
+   color: #fff;
+   letter-spacing: 1px;
+   box-shadow: 0px 0px 50px black inset;
 }
 #diameter {
    outline: none;
@@ -186,4 +304,10 @@ header {
    font-size: 1.3rem;
 }
 
-
+/* pythagoras */
+#pythagoras {
+   height: 700px;
+   background-color: var(--bg2);
+   position: relative;
+   z-index: 1;
+}

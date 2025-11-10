@@ -1,6 +1,7 @@
 header {
    height: auto;
    flex-direction: column;
+   z-index: 1;
 }
 .menu {
    height: 100px;
@@ -52,8 +53,51 @@ header {
    color: #fff;
 }
 .menu2 {display: none;}
+
 /* main */
 
+#introduction {
+  flex-direction: column;
+  
+}
+.perkenalan {
+  border: none;
+  height: auto;
+  width: auto;
+  padding: 20px;
+}
+.brandIntro {
+  height: auto;
+  width: auto;
+}
+.brandIntro > img {
+   border-radius: 1000px;
+   border: 20px solid var(--blue);
+   height: 300px;
+   width: 300px;
+   backdrop-filter: blur(10px);
+   box-shadow: 0px 0px 100px var(--muted);
+}
+.forIntro {
+   flex-direction: row;
+   margin-top: 10px;
+}
+.intro {
+   display: inline-block;
+   background-color: var(--blue);
+
+}
+.intro:nth-child(1) {border-radius: 10px 0px 0px 10px;}
+.intro:nth-child(3) {border-radius: 0 10px 10px 0;}
+.intro > a {
+   color: white;
+   letter-spacing: 2px;
+   font-weight: normal;
+   font-size: small;
+}
+.desPC {display: none;}
+.desHp {display: block;}
+/* rumus lingkaran */
 #lingkaran {
    padding-top: 20px;
    display: flex;
@@ -64,12 +108,20 @@ header {
    flex-direction: column;
    align-items: flex-start;
 }
+#lingkaran::before {
+   content: "";
+   display: none;
+}
+#lingkaran::after {
+   content: "";
+   display: none;
+}
 .vektorBundar {
    height: 150px;
    width: 150px;
    border-radius: 50%;
-   background-color: #fff;
-   margin: auto;
+   background-color: var(--blue);
+   margin: -10px auto 30px auto;
 }
 #diameter {
    outline: none;

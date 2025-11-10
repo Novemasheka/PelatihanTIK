@@ -5,7 +5,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Heka - MATH</title>
    <link rel="stylesheet" href="css/style.css">
-   <link rel="stylesheet" href="css/handphone.css" media="screen and (max-width: 450px)">
+   <link rel="stylesheet" href="css/handphone.css" media="screen and (max-width: 768px)">
    <link rel="shortcut icon" href="css/img/cat-logo.png">
 </head>
 <body>
@@ -13,6 +13,11 @@
    <header id="header">
       <div class="nav1">
          <div class="brand">Heka<span class="title">.</span></div>
+         <ul class="navigation">
+            <li class="navLink"><a href="#">About</a></li>
+            <li class="navLink"><a href="#">Contact</a></li>
+            <li class="navLink"><a href="#">Service</a></li>
+         </ul>
          <div class="menu">
             <div class="roti"></div>
             <div class="roti"></div>
@@ -22,12 +27,9 @@
 
       <div class="nav_cards">
          <ul class="navigation">
-            <li class="navLink" onclick="navLink()"><a href="#introduction">Home</a></li>
-            <li class="navLink" onclick="navLink()"><a href="#introduction">About</a></li>
-            <li class="navLink" onclick="navLink()"><a href="#introduction">Contact</a></li>
+            <li class="navLink navLink2" onclick="navLink()"><a href="#introduction">Home</a></li>
             <li class="navLink navLink2" onclick="navLink()"><a href="#lingkaran">Lingkaran</a></li>
             <li class="navLink navLink2" onclick="navLink()"><a href="">Pythagoras</a></li>
-            <li class="navLink menu2">↓ Menu ↓</li>
          </ul>
       </div>
          
@@ -36,11 +38,61 @@
    <main class="container">
 
       <section id="introduction">
-         
+
+         <div class="brandIntro">
+          <img src="css/img/vemas.png" alt="" class="profil">
+          <figcaption>HEKA<span style="color: var(--blue);">.</span></figcaption>
+        </div>
+        
+        <div class="perkenalan">
+          <div class="brandPerkenalan">
+            <p>Novemas <span style="color: var(--blue)">Heka</span></p>
+            <p><span style="color: var(--blue);">Alfarizi</span>.</p>
+          </div>
+          <br>
+
+          <div class="about_me">
+            <p class="desHp">
+               Aku suka dengan teknologi dan tidak ingin ketinggalan perkembangan zaman,
+                jadi aku memilih Coding dan Editing sebagai hobby ku 
+            </p>
+            <p class="desPC">
+               Aku suka dengan teknologi dan tidak ingin ketinggalan perkembangan zaman,
+               jadi aku memilih Coding dan Editing sebagai hobby ku.
+               Visual Code adalah aplikasi yang kupakai untuk Ngoding dan Davinci Resolve aplikasi editing terfavoritku ^_^
+
+            </p>
+            
+          </div>
+
+          <div class="medsos">
+            <div class="youtube">
+               <img src="css/img/youtube.png" alt="youtube" height="25">
+               <a href="https://www.youtube.com/@Novemas12">@Novemas12 </a>
+            </div>
+            <div class="ig">
+               <img src="css/img/instagram.png" alt="instagram" height="25">
+               <a href="https://www.instagram.com/novemash3kaa?igsh=MW1nMHVlb3c2OWpkbQ==">@novemash3kaa</a>
+            </div>
+            <div class="github">
+               <img src="css/img/github.png" alt="github" height="25">
+               <a href="https://github.com/Novemasheka">@Novemasheka</a>
+            </div>
+          </div>
+
+         <ul class="navigation forIntro">
+            <li class="navLink intro"><a href="#">About</a></li>
+            <li class="navLink intro"><a href="#introduction">Contact</a></li>
+            <li class="navLink intro"><a href="#introduction">Service</a></li>
+         </ul>
+
+        </div>
+
+
       </section>
 
       <section id="lingkaran">
-         <div class="vektorBundar"></div>
+         <div class="vektorBundar">RUMUS<br>&nbsp;LINGKARAN</div>
          <div class="brandBundar">
             <h3 style="color: white;">Menghitung, </h3>
             <h3>Luas & Keliling <span style="color: white;">lingkaran.</span></h3>
@@ -65,6 +117,10 @@
             <h4 id="outputBundar"></h4>
          </div>
          
+      </section>
+
+      <section id="pythagoras">
+
       </section>
 
    </main>

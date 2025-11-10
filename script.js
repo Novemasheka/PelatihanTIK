@@ -2,13 +2,15 @@ let navigasi = document.getElementById("header")
 let nav = document.getElementsByClassName("nav_cards");
 let roti = document.getElementsByClassName("roti")
 let hamburger = document.getElementsByClassName("menu");
+let container = document.getElementsByClassName("container")
 
 window.onscroll = function () {Headers()};
 function Headers() {
    if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
       navigasi.style.position = "fixed";
    } else {
-      navigasi.style.position = "relative";
+      container[0].style.marginTop = "100px";
+      navigasi.style.marginTop = "-100px";
    }
 }
 
