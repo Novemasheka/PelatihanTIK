@@ -140,28 +140,6 @@ header {
 #jari:focus {
    border: 3px solid var(--blue);
 }
-.brandBundar {
-   font-family: jetbrains;
-   color: var(--blue);
-   margin: 20px 20px;
-   
-}
-.inputBundar {
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start;
-   flex-wrap: wrap;
-}
-.brandBundar > h3 {
-   font-size: 1.5rem;
-}
-.brandBundar > figcaption {
-   color: var(--muted);
-   font-size: small;
-   font-style: italic;
-   margin-top: 10px;
-
-}
 .count {
    padding: 10px;
    border-radius: 10px;
@@ -183,4 +161,45 @@ header {
    color: #fff;
    font-family: jetbrains;
    font-size: 1.2rem;
+}
+
+/* pythagoras */
+#pythagoras {
+   align-items: flex-start;
+}
+.segitiga_samakaki {
+   margin: 0 auto;
+}
+
+/* rumus */
+.brandRumus {
+   font-family: jetbrains;
+   color: var(--blue);
+   margin: 20px 20px 20px 20px;
+   
+}
+.inputRumus {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   flex-wrap: wrap;
+}
+.brandRumus > h3 {
+   font-size: 1.5rem;
+}
+.brandRumus > figcaption {
+   color: var(--muted);
+   font-size: small;
+   font-style: italic;
+   margin-top: 10px;
+
+}
+.rumusLebih > input {margin-top: 10px;}
+.goras {
+   margin-left: 0;
+   margin-top: 10PX;
+   
+}
+.goras > input {
+   margin-right: 10px;
 }

@@ -287,28 +287,7 @@ header {
 #jari:focus {
    border: 2px solid var(--blue);
 }
-.inputBundar {
-   display: flex;
-   padding: 10px;
-}
-.inputBundar > input {margin: 5px;}
-.jari {margin: 5px;}
-.brandBundar {
-   font-family: jetbrains;
-   color: var(--blue);
-   margin: 20px 0px;
-   margin: 10px;
-}
-.brandBundar > h3 {
-   font-size: 2rem;
-}
-.brandBundar > figcaption {
-   color: var(--muted);
-   font-size: medium;
-   font-style: italic;
-   margin-top: 10px;
 
-}
 .count {
    padding: 10px;
    border-radius: 10px;
@@ -343,4 +322,74 @@ header {
    background-color: var(--bg2);
    position: relative;
    z-index: 1;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
 }
+.segitiga_samakaki {
+   border-left: px solid transparent;
+   border-right: 200px solid transparent;
+	border-bottom: 100px solid #fff;
+   margin: 0 auto;
+}
+#garisA {
+   outline: none;
+   padding: 10px;
+   border-radius: 10px;
+   transition: .3s;
+}
+#garisA:focus {
+   border: 3px solid var(--blue);
+}
+#garisB {
+   border-radius: 10px;
+   outline: none;
+   padding: 10px;
+   transition: .3s;
+}
+#garisB:focus {
+   border: 2px solid var(--blue);
+}
+#garisC {
+   border-radius: 10px;
+   outline: none;
+   padding: 10px;
+   transition: .3s;
+}
+#garisC:focus {
+   border: 2px solid var(--blue);
+}
+
+/* rumus */
+.rumusLebih {
+   display: flex;
+   flex-direction: column;
+}
+.inputRumus {
+   display: flex;
+   padding: 10px;
+}
+.inputRumus > input {margin: 5px;}
+.brandRumus {
+   font-family: jetbrains;
+   color: var(--blue);
+   margin: 80px 0px 20px 0px;
+}
+.brandRumus > h3 {
+   font-size: 2rem;
+}
+.brandRumus > figcaption {
+   color: var(--muted);
+   font-size: medium;
+   font-style: italic;
+   margin-top: 10px;
+
+}
+.jari {margin: 5px;}
+.goras {
+   margin-left: 10px;
+   display: flex;
+   align-items: flex-end;
+}
+

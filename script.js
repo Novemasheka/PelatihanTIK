@@ -11,7 +11,7 @@ let introduction = document.getElementById("introduction")
 var handphone = window.matchMedia("(max-width: 700px)")
 function responsiveScroll() {
    if(handphone.matches) {
-      if(document.documentElement.scrollTop > 50) {
+      if(document.documentElement.scrollTop > 150) {
          navigasi.style.position = "fixed"
       } else {
           navigasi.style.position = "relative"
@@ -52,35 +52,95 @@ function navLink() {
 // lingkaran
 
 outputBundar.innerHTML = `
-      <span style="color: var(--blue)">Keliling</span> : ? <br>
-      <span style="color: var(--blue)">Luas</span>    &nbsp;&nbsp;&nbsp; : ? 
+      <span style="color: var(--blue)">Keliling</span> : ? cm<br>
+      <span style="color: var(--blue)">Luas</span>   &nbsp;&nbsp;&nbsp; : ? cm²
    `
 function countLingkaran() {
    let jari2 = Number(document.getElementById("jari").value);
    let diameter = Number(document.getElementById("diameter").value);
    let outputBundar = document.getElementById("outputBundar")
    
-   let pie = 3.14;
-   if(jari2 > 0 && diameter == 0){
+   let pie = Math.PI;
+   if(jari2 > 0 && diameter === 0){
       oDiameter = jari2 * 2;
-      keliling = 2 * pie * (oDiameter/2)
-      luas = pie * (oDiameter/2) **2
+      keliling = (2 * pie * (oDiameter/2)).toFixed(2)
+      luas = pie * ((oDiameter/2) **2).toFixed(2)
       outputBundar.innerHTML = `
       <span style="color: var(--blue)">Diameter</span> : ${oDiameter} cm<br>
       <span style="color: var(--blue)">Keliling</span> : ${keliling} cm<br>
       <span style="color: var(--blue)">Luas</span>     &nbsp;&nbsp;&nbsp;&nbsp: ${luas} cm²
    `
-   } else if (diameter > 0 && jari2 == 0) {
+   } else if (diameter > 0 && jari2 === 0) {
       oJari2 = diameter /2;
-      keliling = 2 * pie * oJari2
-      luas = pie * oJari2 **2
+      keliling = (2 * pie * oJari2).toFixed(2)
+      luas = (pie * oJari2 **2).toFixed(2)
 
       outputBundar.innerHTML = `
       <span style="color: var(--blue)">Jari²</span> &nbsp;&nbsp;&nbsp: ${oJari2} cm<br>
       <span style="color: var(--blue)">Keliling</span> : ${keliling} cm<br>
       <span style="color: var(--blue)">Luas</span> &nbsp;&nbsp;&nbsp;&nbsp: ${luas} cm²
       `
-   } else if (jari2 == 0 && diameter == 0) {
+   } else if (jari2 == 0 && diameter === 0) {
       alert("tolong diisi ya, jangan dikosongkan ^^")
+   }
+}
+
+// pythagoras
+
+
+outputPythagoras.innerHTML = `
+      Garis<span style="color: var(--blue)"> A</span> : ?<br>
+      Garis<span style="color: var(--blue)"> B</span> : ?<br>
+      Garis<span style="color: var(--blue)"> C</span> : ?<br>
+   `
+function countPythagoras() {
+   let garisA = Number(document.getElementById("garisA").value)
+   let garisB = Number(document.getElementById("garisB").value)
+   let garisC = Number(document.getElementById("garisC").value)
+   let outputPythagoras = document.getElementById("outputPythagoras")
+
+   if(garisA > 0 && garisB > 0 && garisC === 0) {
+      // menghitungGarisC
+      let outputGarisC =  Math.sqrt(garisA**2 + garisB**2).toFixed(2);
+      
+      outputPythagoras.innerHTML = `
+      Garis<span style="color: var(--blue)"> A</span> : <span style="color: yellow">${garisA}</span><br>
+      Garis<span style="color: var(--blue)"> B</span> : <span style="color: yellow">${garisB}</span><br>
+      Garis<span style="color: var(--blue)"> C</span> : ${outputGarisC}<br>
+      `
+
+   } else if (garisA > 0 && garisB === 0 && garisC > 0 ) { 
+       // menghitungGarisB
+      if(garisC <= garisA) {
+         outputPythagoras.innerHTML = `
+         Garis<span style="color: var(--blue)"> A</span> : <span style="color: yellow">${garisA}</span><br>
+         Garis<span style="color: var(--blue)"> B</span> : <span style="color: red">Error "GarisC > GarisA"</span><br>
+         Garis<span style="color: var(--blue)"> C</span> : <span style="color: yellow">${garisC}</span><br>
+         `
+      } else{
+         let outputGarisB =  Math.sqrt(garisC**2 - garisA**2).toFixed(2);
+         outputPythagoras.innerHTML = `
+         Garis<span style="color: var(--blue)"> A</span> : <span style="color: yellow">${garisA}</span><br>
+         Garis<span style="color: var(--blue)"> B</span> : ${outputGarisB}<br>
+         Garis<span style="color: var(--blue)"> C</span> : <span style="color: yellow">${garisC}</span><br>
+      `
+      }
+      
+   } else if(garisA === 0 && garisB > 0 && garisC > 0) {
+       // menghitungGarisA
+      if(garisC <= garisB) {
+         outputPythagoras.innerHTML = `
+         Garis<span style="color: var(--blue)"> A</span> : <span style="color: red">Error "GarisC > GarisA"</span><br>
+         Garis<span style="color: var(--blue)"> B</span> : <span style="color: yellow">${garisB}</span><br>
+         Garis<span style="color: var(--blue)"> C</span> : <span style="color: yellow">${garisC}</span><br>
+         `
+      } else{
+         let outputGarisA =  Math.sqrt(garisC**2 - garisB**2).toFixed(2);
+         outputPythagoras.innerHTML = `
+         Garis<span style="color: var(--blue)"> A</span> : ${outputGarisA}<br>
+         Garis<span style="color: var(--blue)"> B</span> : <span style="color: yellow">${garisB}</span><br>
+         Garis<span style="color: var(--blue)"> C</span> : <span style="color: yellow">${garisC}</span><br>
+      `
+      }
    }
 }

@@ -93,18 +93,19 @@
 
       <section id="lingkaran">
          <div class="vektorBundar">RUMUS<br>&nbsp;LINGKARAN</div>
-         <div class="brandBundar">
+         <div class="brandRumus">
             <h3 style="color: white;">Menghitung, </h3>
             <h3>Luas & Keliling <span style="color: white;">lingkaran.</span></h3>
             <figcaption>jika salah satu tidak diketahui, "jangan di isi!" </figcaption>
+            <figcaption style="color: rgb(171, 25, 25);">Satuan Centi Meter (cm) !!</figcaption>
          </div>
          
          
          <div class="rumus">
-            <div class="inputBundar">
-               <input type="number" name="diameter" id="diameter" placeholder="Diameter">
+            <div class="inputRumus">
+               <input type="number" name="diameter" id="diameter" placeholder="Diameter . . . cm">
                <div class="jari">
-                  <input type="number" name="jari" id="jari" placeholder="Jari-jari">
+                  <input type="number" name="jari" id="jari" placeholder="Jari-jari . . . cm">
                   <button class="count Bundar" onclick="countLingkaran()">Hitung</button>
                </div>
                
@@ -120,6 +121,33 @@
       </section>
 
       <section id="pythagoras">
+         <div class="segitiga_samakaki"></div>
+
+         <div class="brandRumus">
+            <h3>Menghitung, </h3>
+            <h3><span style="color: white;">Luas & Keliling</span> lingkaran.</h3>
+            <figcaption>jika salah satu tidak diketahui, "jangan di isi!" </figcaption>
+         </div>
+
+         <div class="rumus">
+            <div class="inputRumus">
+               <div class="rumusLebih">
+                  <input type="number" name="garisA" id="garisA" placeholder="Garis A . . . ">
+                  <input type="number" name="garisB" id="garisB" placeholder="Garis B . . . ">
+               </div>
+               
+               <div class="goras">
+                  <input type="number" name="garisC" id="garisC" placeholder="Garis C . . . ">
+                  <button class="count Bundar" onclick="countPythagoras()">Hitung</button>
+               </div>
+               
+            </div>
+         </div>
+
+         <div class="output">
+            <h3 style="color: #fff;text-align: center;">↓ Hasil ↓</h3>
+            <h4 id="outputPythagoras"></h4>
+         </div>
 
       </section>
 
