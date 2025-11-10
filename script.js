@@ -17,7 +17,7 @@ function responsiveScroll() {
           navigasi.style.position = "relative"
       }
    } else {
-      navigasi.style.position = "fixed"
+      navigasi.style.position = "relative"
    }
 }
 window.addEventListener("scroll", responsiveScroll);
@@ -32,14 +32,11 @@ hamburger[0].addEventListener("click", ()=> {
    roti[2].style.width = roti[2].style.width ? "" : "20px"
    roti[2].style.transform = roti[2].style.transform ? "" : "translateX(10px) rotate(-60deg) translateY(-6px)"
 
-   let statusNav = [window.getComputedStyle(nav[0]).opacity,window.getComputedStyle(nav[0]).height];
-   if(statusNav[0] == "0") {
-      nav[0].style.opacity = "100"
-      nav[0].style.height = "200px"
+   let statusNav = window.getComputedStyle(nav[0]).display;
+   if(statusNav === "none") {
+      nav[0].style.display = "block"
    } else {
-      nav[0].style.opacity = "0"
-      nav[0].style.height = "0"
-      
+      nav[0].style.display = "none"
    }
 })
 function navLink() {

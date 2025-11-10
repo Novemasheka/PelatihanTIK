@@ -29,9 +29,8 @@ header {
 }
 .nav_cards {
    width: 100%;
-   opacity: 0;
-   height: 0;
    transition: .3s;
+   display: none;
 }
 .navLink {
    list-style: none ;
