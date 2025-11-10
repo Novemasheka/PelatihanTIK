@@ -63,6 +63,7 @@ header {
   height: auto;
   width: auto;
   padding: 20px;
+  margin-top: -180px;
 }
 .brandIntro {
   height: auto;
@@ -70,7 +71,7 @@ header {
 }
 .brandIntro > img {
    border-radius: 1000px;
-   border: 20px solid var(--blue);
+   border: 10px solid var(--blue);
    height: 300px;
    width: 300px;
    backdrop-filter: blur(10px);
