@@ -3,16 +3,26 @@ let nav = document.getElementsByClassName("nav_cards");
 let roti = document.getElementsByClassName("roti")
 let hamburger = document.getElementsByClassName("menu");
 let container = document.getElementsByClassName("container")
+let introduction = document.getElementById("introduction")
 
-window.onscroll = function () {Headers()};
-function Headers() {
-   if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-      navigasi.style.position = "fixed";
+
+
+// Create a MediaQueryList object
+var handphone = window.matchMedia("(max-width: 700px)")
+function responsiveScroll() {
+   if(handphone.matches) {
+      if(document.documentElement.scrollTop > 50) {
+         navigasi.style.position = "fixed"
+      } else {
+          navigasi.style.position = "relative"
+      }
    } else {
-      container[0].style.marginTop = "100px";
-      navigasi.style.marginTop = "-100px";
+      navigasi.style.position = "fixed"
    }
 }
+window.addEventListener("scroll", responsiveScroll);
+handphone.addEventListener("change", responsiveScroll)
+
 
 
 hamburger[0].addEventListener("click", ()=> {

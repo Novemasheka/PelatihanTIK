@@ -1,7 +1,6 @@
 header {
    height: auto;
    flex-direction: column;
-   z-index: 1;
 }
 .menu {
    height: 100px;
@@ -58,7 +57,7 @@ header {
 
 #introduction {
   flex-direction: column;
-  
+  margin-top: 0;
 }
 .perkenalan {
   border: none;

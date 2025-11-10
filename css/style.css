@@ -1,6 +1,6 @@
 @font-face {
    font-family: jetbrains;
-   src: url("font/JetBrainsMono-Bold.ttf");
+   src: url(font/JetBrainsMono-Bold.ttf);
 }
 @font-face {
    font-family: lato;
@@ -28,9 +28,9 @@ header {
    backdrop-filter: blur(5px);
    justify-content: space-between;
    align-items: center;
-   height: auto;
    flex-direction: column;
-   z-index: 1;
+   z-index: 999;
+   
 }
 .nav1 {
    height: 100px;
@@ -134,7 +134,7 @@ header {
 /* introduction */
 
 #introduction {
-   height: 800px;
+   height: 1000px;
    display: flex;
    align-items: center;
    justify-content: space-around;
@@ -182,15 +182,26 @@ header {
 }
 .about_me > p {font-size: 16px;}
 .forIntro {
-   justify-content: center;
-   margin-top: -20px;
+   height:auto;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   margin-top: 20px;
 }
 .intro {
    background-color: var(--blue);
+   list-style: none;
+   width: 100%;
+   
 }
 .intro > a {
    color: white;
-   padding: 10px 50px;
+   text-decoration: none;
+   font-family: jetbrains;
+   letter-spacing: 2px;
+   text-align: center;
+   display: block;
+   padding: 10px;
 }
 .intro:nth-child(1) {border-radius: 10px 0px 0px 10px;}
 .intro:nth-child(3) {border-radius: 0 10px 10px 0;}
