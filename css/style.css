@@ -28,6 +28,9 @@ header {
    backdrop-filter: blur(5px);
    justify-content: space-between;
    align-items: center;
+   height: auto;
+   flex-direction: column;
+   z-index: 1;
 }
 .nav1 {
    height: 100px;
@@ -82,30 +85,50 @@ header {
 }
 
 .navigation {
-   height: 100px;
+   height:auto;
+   width: 100%;
    display: flex;
+   flex-direction: column;
    align-items: center;
-   justify-content: space-around;
+}
+.two {
+   flex-direction: row;
+   width: 400px;
+   margin-left: -85px;
+}
+.nav_cards {
+   width: 100%;
+   opacity: 0;
+   height: 0;
+   transition: .3s;
 }
 .navLink {
    list-style: none ;
-
+   width: 100%;
+   display: none;
 }
 .navLink > a {
    text-decoration: none;
    color: var(--muted);
    font-family: "jetBrains", sans-serif;
    display: block;
-   padding: 35px 20px;
+   padding: 10px;
    text-align: center;
-   transition: .3s;
+   transition: .2s;
+   border-radius: 10px;
 }
+.navLink2 {display: inline-block;}
 .navLink > a:hover {
    color: #fff;
+   background-color: var(--muted);
+   
 }
-.navLink2 {
-   display: none;
+.kedua {
+   display: inline-block;
+   margin: 5px;
+
 }
+
 /* main */
 
 /* introduction */
