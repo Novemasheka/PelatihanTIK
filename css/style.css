@@ -202,8 +202,11 @@ header {
    display: block;
    padding: 10px;
 }
-.intro:nth-child(1) {border-radius: 10px 0px 0px 10px;}
-.intro:nth-child(3) {border-radius: 0 10px 10px 0;}
+.intro {
+   border-radius: 10px;
+   margin: 0 2px 0 2px;
+}
+
 
 .desHp {display: none;}
 .desHp,.desPC {padding-left: 10px;}
@@ -403,6 +406,7 @@ header {
 }
 .brand_footer {
    height: 200px;
+   
 }
 .profil_footer {
    display: flex;
@@ -413,26 +417,34 @@ header {
    font-size: 3rem;
    font-family: jetbrains;
    margin-left: 10px;
+   color: #c1c1c1;
 }
+.brand_
 .deskripsi_footer {
    width: 400px;
+   
 }
 .deskripsi_footer > p {
    font-family: lato;
    font-size: 1rem;
    margin-left: 70px;
+   color: #ffffff;
 }
 .profil_footer > img {border-radius: 1000px;}
 .contact_us_footer {
    height: 200px;
    width: 400px;
 }
-.email_footer {margin: 10px 10px 10px 0;}
-.addres_footer {margin: 10px 10px 10px 0;}
+.email_footer > p {
+   margin: 0 10px 10px 10px;
+   font-family: lato;
+   color: white;
+}
 .contact_us_footer > h1 {
    font-family: jetbrains, sans-serif;
    font-size: 2rem;
    font-weight: bolder;
+   color: #c1c1c1;
 }
 .medsos_footer {
    width: 400px;
@@ -449,4 +461,22 @@ header {
    font-family: jetbrains;
    letter-spacing: 2px;
    font-size: smaller;
+}
+.medsos_footer > h3 {
+   color: #c1c1c1;
+   font-size: 2rem;
+   font-family: jetbrains;
+}
+.medsos_footer > p {
+   font-size: small;
+   font-family: lato;
+   color: white;
+   margin-left: 20px;
+}
+.media {
+   display: flex;
+   margin-top: 10px;
+   width: 200px ;
+   margin-left: -20px;
+   justify-content: space-around;
 }

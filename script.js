@@ -17,7 +17,7 @@ function responsiveScroll() {
           navigasi.style.position = "relative"
       }
    } else {
-      navigasi.style.position = "relative"
+      navigasi.style.position = "fixed"
    }
 }
 window.addEventListener("scroll", responsiveScroll);
@@ -46,8 +46,7 @@ function navLink() {
    roti[1].style.width = roti[1].style.width ? "" : "20px"
    roti[2].style.width = roti[2].style.width ? "" : "20px"
    roti[2].style.transform = roti[2].style.transform ? "" : "translateX(10px) rotate(-60deg) translateY(-6px)"
-   nav[0].style.opacity = "0"
-   nav[0].style.height = "0"
+   nav[0].style.display = "none"
 }
 // lingkaran
 

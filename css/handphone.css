@@ -86,8 +86,7 @@ header {
    background-color: var(--blue);
 
 }
-.intro:nth-child(1) {border-radius: 10px 0px 0px 10px;}
-.intro:nth-child(3) {border-radius: 0 10px 10px 0;}
+.intro {border-radius: 10px;}
 .intro > a {
    color: white;
    letter-spacing: 2px;
@@ -202,4 +201,11 @@ header {
 }
 .goras > input {
    margin-right: 10px;
+}
+/* footer */
+.main_footer {
+   flex-direction: column;
+}
+.brand_footer {
+   display: none;
 }
