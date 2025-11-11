@@ -80,11 +80,11 @@ header {
 .forIntro {
    flex-direction: row;
    margin-top: 10px;
+   width: auto;
+   justify-content: flex-start;
 }
 .intro {
-   display: inline-block;
    background-color: var(--blue);
-
 }
 .intro {border-radius: 10px;}
 .intro > a {
@@ -203,9 +203,24 @@ header {
    margin-right: 10px;
 }
 /* footer */
-.main_footer {
-   flex-direction: column;
-}
 .brand_footer {
-   display: none;
+   width: auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   height: auto;
+}
+.deskripsi_footer {width: auto;}
+.deskripsi_footer > p {margin-left: 0;}
+.main_footer {flex-direction: column;}
+.main_footer > div {margin: 10px;}
+.contact_us_footer {
+   width: auto;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+}
+.medsos_footer {
+   width: auto;
 }
