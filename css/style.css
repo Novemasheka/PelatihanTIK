@@ -392,4 +392,61 @@ header {
    display: flex;
    align-items: flex-end;
 }
+/* footer */
+.main_footer {
+   display: flex;
+   width: 100%;
+   align-items: center;
+   justify-content: space-around;
+   background-color: #454545;
+   padding: 30px;
+}
+.brand_footer {
+   height: 200px;
+}
+.profil_footer {
+   display: flex;
+   align-items: center;
+   margin-left: 10px;
+}
+.profil_footer > h3 {
+   font-size: 3rem;
+   font-family: jetbrains;
+   margin-left: 10px;
+}
+.deskripsi_footer {
+   width: 400px;
+}
+.deskripsi_footer > p {
+   font-family: lato;
+   font-size: 1rem;
+   margin-left: 70px;
+}
+.profil_footer > img {border-radius: 1000px;}
+.contact_us_footer {
+   height: 200px;
+   width: 400px;
+}
+.email_footer {margin: 10px 10px 10px 0;}
+.addres_footer {margin: 10px 10px 10px 0;}
+.contact_us_footer > h1 {
+   font-family: jetbrains, sans-serif;
+   font-size: 2rem;
+   font-weight: bolder;
+}
+.medsos_footer {
+   width: 400px;
+   height: 200px;
+}
+.copyright {
+   display: flex;
+   justify-content: center;
+   background-color: #505050;
 
+}
+.copyright > p {
+   color: #dfdfdf;
+   font-family: jetbrains;
+   letter-spacing: 2px;
+   font-size: smaller;
+}
